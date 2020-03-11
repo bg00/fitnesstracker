@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitnesstracker"
     useFindAndModify: false
 });
 
-app.use(require("./public"));
+app.use(express.static("public"));
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
